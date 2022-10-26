@@ -1,0 +1,19 @@
+<form #myForm="ngForm" (ngSubmit)="myForm.valid && onSubmit()">
+    <fieldset>
+        <label for="title"></label>
+        <input id="title" name="title" type="text" required maxlength="5" [(ngModel)]="orderModel.title">
+    </fieldset>
+    <fieldset>
+        <label for="quantity"></label>
+        <input type="number" id="quantity" name="quantity" required [(ngModel)]="orderModel.quantity">
+    </fieldset>
+    <fieldset>
+        <label for="date"></label>
+        <input type="date" id="date" name="date" required [(ngModel)]="orderModel.date">
+    </fieldset>
+    <fieldset>
+        <label for="email"></label>
+        <input type="email" id="email" name="email" required email [(ngModel)]="orderModel.email">
+    </fieldset>
+    <button type="reset">Réinitialiser</button><button type="submit">Valider</button>
+</form>
